@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+{% block title %} Article Page {% endblock %}
+{% block body %}
+	<div class="menu"><a href="/_edit/{{page.title}}">Edit</a></div>
+	<div class="page-title">
+		<h1>{{page.title}}</h1>
+	</div>
+	<div class="content">
+		<div name="content" cols="90" rows="40">
+			{{page.content}}
+		</div>
+	</div>
+{% endblock %}

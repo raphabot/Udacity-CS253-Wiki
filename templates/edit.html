@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block title %} Update Article Page {% endblock %}
+{% block body %}
+	<form method="post">
+	<div class="page-title">
+		<h1>{{page.title}}</h1>
+	</div>
+	<div class="content">
+		<textarea name="content" cols="90" rows="40">
+			{{page.content}}
+		</textarea>
+	</div>
+	<div label="envia-botao"><input type="submit"></div>
+	</form>
+{% endblock %}

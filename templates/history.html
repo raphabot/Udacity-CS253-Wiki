@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% block title %} History Page {% endblock %}
+{% block body %}
+	<div class="menu"><a href="/_edit/{{title}}">Edit</a></div>
+	<div class="page-title">
+		<h1>{{title}}</h1>
+	</div>
+	{% for page in pages%}
+	<div class="content-block">
+		<div name="content" cols="90" rows="40">
+			{{page.content}}
+		</div>
+		<div name="modified">
+			{{page.created}}
+		</div>
+	</div>
+	<br>
+	{% endfor %}
+{% endblock %}

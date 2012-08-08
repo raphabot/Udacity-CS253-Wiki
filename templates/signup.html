@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+{% block title %} Sign Up Page {% endblock %}
+{% block body %}
+	<form method = "post">
+		<h1>User SignUp</h1>
+		<label for="username">Username
+			<input type="text" name="username" value="{{username}}"> {{user_err}}
+		</label>
+		<br>
+		<label for="password">Password
+			<input type="password" name="password" value="{{password}}"> {{password_err}}
+		</label>
+		<br>
+		<label for="verify">Verify password
+			<input type="password" name="verify" value="{{verify}}"> {{verify_err}}
+		</label>
+		<br>
+		<label for="email">Email
+			<input type="text" name="email" value="{{email}}"> {{email_err}}
+		</label>
+		<br>
+		<input type="submit">
+	</form>
+{% endblock %}
+

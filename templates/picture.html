@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block title %} Post {% endblock %}
+{% block body %}
+	<div class = "Title">{{picture_name}}</div>
+	<div class = "Created">posted by: {{username}} at {{created}}</div>
+	<img href = "{{picture_link}}">
+	<div class = "Comments">Comments:</div>
+	{% for comment in comments %}
+		<div class = "Commenter">{{comment.username}}</div>
+		<div class = "Comment">{{comment.comment}}</div>
+	{% endfor %}
+{% endblock %}
